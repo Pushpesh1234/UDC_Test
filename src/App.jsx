@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -22,6 +22,23 @@ import { Button } from "react-bootstrap"; // import this
 function App() {
   const [showAuth, setShowAuth] = useState(false);
   const popupFormRef = useRef(); // Add this ref
+   useEffect(() => {
+    // Prevent browser restoring previous scroll and jump to anchors
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Remove any hash (e.g. #contact) or trailing /contact on initial load
+    const { hash, pathname, search } = window.location;
+    const base = "/UDC_Test";
+    if (hash === "#contact" || pathname.endsWith("/contact")) {
+      const newUrl = base + (search || "");
+      window.history.replaceState(null, "", newUrl);
+    }
+
+    // Ensure page is at top on first render (fixes mobile jump-to-footer)
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <BrowserRouter basename="/UDC_Test">
