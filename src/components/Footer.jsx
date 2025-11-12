@@ -9,7 +9,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
-import "./Footer.css";
+import "./footer.css";
 
 const Footer = () => {
   return (

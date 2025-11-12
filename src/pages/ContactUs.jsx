@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "./Contact.css";
+import "./contact.css";
 
 const Contact = () => {
   useEffect(() => {

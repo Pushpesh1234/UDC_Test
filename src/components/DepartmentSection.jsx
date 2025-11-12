@@ -9,7 +9,7 @@ import {
   FaUserTie,
   FaBullhorn,
 } from "react-icons/fa";
-import "./Departmentsection.css";
+import "./DepartmentSection.css";
 
 const tabData = [
   {

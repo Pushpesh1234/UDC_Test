@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Services.css";
+import "./services.css";
 
 // ✅ Data array
 const serviceData = [
