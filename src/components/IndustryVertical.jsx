@@ -45,7 +45,8 @@ const IndustryVertical = () => {
         <h2 className="text-Black fw-bold mb-5">Industry Verticals</h2>
         <Row className="justify-content-center">
           {industryCards.map((card, index) => (
-            <Col key={index} lg={2} md={4} sm={6} xs={6} className="mb-4" data-aos="fade-up">
+            <Col key={index} lg={2} md={4} sm={6} xs={12} className="mb-4" data-aos="fade-up">
+            {/* // <Col key={index} lg={2} md={4} sm={6} xs={6} className="mb-4" data-aos="fade-up"> */}
               <OverlayTrigger
                 placement="top"
                 overlay={<Tooltip>{card.title}</Tooltip>}

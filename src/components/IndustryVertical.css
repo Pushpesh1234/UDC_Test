@@ -1,9 +1,15 @@
 .industry-card-title {
-  white-space: normal;        /* allow wrapping */
+  white-space: normal !important;        /* allow wrapping */
   word-break: break-word;     /* break long words if needed */
   overflow-wrap: anywhere;    /* safe wrap for very long tokens */
   font-size: 1rem;
   margin: 0 auto;
+  hyphens: auto;
+  padding: 0 6px;
+ display: block;
+  max-width: 100%;
+  line-height: 1.15;
+
 }
 
 
@@ -55,6 +61,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--card, #f9f9f9);
   border: 2px solid transparent;
+  
 }
 
 .industry-card:hover {
@@ -111,6 +118,8 @@ body.dark .industry-vertical {
   transition: transform 0.3s ease;
   min-height: 160px;
   border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .industry-card:hover {
@@ -164,6 +173,7 @@ body.dark .industry-card .text-muted {
   }
   .industry-card-title {
     font-size: 0.9rem;
+     padding: 0 8px;
   }
   .icon-wrapper {
     font-size: 1.6rem; /* reduce icon size on very small screens */
