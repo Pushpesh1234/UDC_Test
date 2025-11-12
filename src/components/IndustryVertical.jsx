@@ -56,8 +56,8 @@ const IndustryVertical = () => {
                 >
                   <div className="icon-wrapper fs-2 mb-2">{card.icon}</div>
                   <Card.Text
-                    className="fw-semibold"
-                    style={{ whiteSpace: "nowrap", fontSize: "1rem" }}
+                    className="fw-semibold industry-card-title"
+                    // style={{ whiteSpace: "nowrap", fontSize: "1rem" }}
                   >
                     {card.title}
                   </Card.Text>

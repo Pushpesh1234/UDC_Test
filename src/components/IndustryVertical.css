@@ -1,3 +1,13 @@
+.industry-card-title {
+  white-space: normal;        /* allow wrapping */
+  word-break: break-word;     /* break long words if needed */
+  overflow-wrap: anywhere;    /* safe wrap for very long tokens */
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+
+
 .industry-vertical {
   padding: 4rem 2rem;
   background: var(--bg, #fff);
@@ -144,4 +154,18 @@ body.dark .industry-card .text-muted {
 }
 .industry-card:hover .icon-wrapper {
   transform: scale(1.2);
+}
+
+/* Slightly reduce size and spacing on small screens */
+@media (max-width: 576px) {
+  .industry-card {
+    min-height: 120px;
+    padding: 14px;
+  }
+  .industry-card-title {
+    font-size: 0.9rem;
+  }
+  .icon-wrapper {
+    font-size: 1.6rem; /* reduce icon size on very small screens */
+  }
 }
