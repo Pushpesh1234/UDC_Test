@@ -24,7 +24,7 @@ function App() {
   const popupFormRef = useRef(); // Add this ref
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/UDC_Test">
       <div className="font-sans">
         <Navbar
   onAuthOpen={() => setShowAuth(true)}
