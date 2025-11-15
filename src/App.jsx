@@ -64,7 +64,7 @@ function App() {
                <BitrixShowcase onOpenForm={(label) => popupFormRef.current.open(label)} />
                 <FeatureSlider />
                 <Technology />
-                <IndustryVertical />
+                <IndustryVertical onOpenForm={() => popupFormRef.current.open("Industry Vertical")} />
                 <DepartmentSection  onPopupOpen={() => popupFormRef.current.open()}/>
                 <Testimonial />
                 <WhyChooseUs onPopupOpen={() => popupFormRef.current.open()} />

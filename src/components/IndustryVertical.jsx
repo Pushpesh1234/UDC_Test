@@ -33,11 +33,17 @@ const industryCards = [
   { title: "Professional Services", icon: <FaBriefcase />, bgClass: "bg-dark text-white" },
 ];
 
-const IndustryVertical = () => {
+const IndustryVertical = ({onOpenForm}) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const handleCardClick = (cardTitle) => {
+    if (onOpenForm) {
+      onOpenForm(cardTitle);
+    }
+  };
+ 
   return (
     <div className="industry-section py-5 text-center">
 
@@ -54,6 +60,7 @@ const IndustryVertical = () => {
                 <Card
                   className={`text-center rounded-4 shadow-sm industry-card ${card.bgClass}`}
                   style={{ minHeight: "140px", padding: "20px", cursor: "pointer" }}
+                   onClick={() => handleCardClick(card.title)}
                 >
                   <div className="icon-wrapper fs-2 mb-2">{card.icon}</div>
                   <Card.Text
