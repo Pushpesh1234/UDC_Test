@@ -29,7 +29,7 @@ const Navbar = ({ onAuthOpen, onOpenForm }) => {
           <span className="custom-text d-none d-sm-inline">
             Unique Design Consultant
           </span>
-          <span className="custom-text d-inline d-sm-none">UDC</span>
+          {/* <span className="custom-text d-inline d-sm-none">Unique Design Cons</span> */}
         </Link>
 
         <button
